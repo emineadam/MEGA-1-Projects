@@ -1,0 +1,56 @@
+<html>
+<head></head>
+<body>
+<h3>1. Hafta: Hesap Makinesi Oluşturma</h3>
+
+<h3>Hazırlayan: <i>Emine 
+  <i>ADAM</h3>
+<style>
+  table,
+      td {
+        border: 5px ridge;
+      }
+#calc{width:300px;height:250px;}
+.anabutton{width:330px;height:50px;font-size:30px;background: white}
+.button{width:100px;height:51px;font-size:30px;background: lightgray}
+.kenarbutton{width:50px;height:51px;font-size:30px;background: gray;}
+</style>
+<form Name="ccal">
+<table id="calc" border=5>
+<tr>
+<td colspan=3><input class="anabutton"name="display" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text"></td>
+<td><input class="kenarbutton" type=button value="C" OnClick="calc.display.value=''"></td>
+</tr>
+<tr>
+<td><input class="button" type=button value="1" OnClick="calc.display.value+='1'"></td>
+<td><input class="button" type=button value="2" OnClick="calc.display.value+='2'"></td>
+<td><input class="button" type=button value="3" OnClick="calc.display.value+='3'"></td>
+<td><input class="kenarbutton" type=button value="/" OnClick="calc.display.value+='/'"></td>
+</tr>
+<tr>
+<td><input class="button" type=button value="4" OnClick="calc.display.value+='4'"></td>
+<td><input class="button" type=button value="5" OnClick="calc.display.value+='5'"></td>
+<td><input class="button" type=button value="6" OnClick="calc.display.value+='6'"></td>
+<td><input class="kenarbutton" type=button value="-" OnClick="calc.display.value+='-'"></td>
+</tr>
+<tr>
+<td><input class="button" type=button value="7" OnClick="calc.display.value+='7'"></td>
+<td><input class="button" type=button value="8" OnClick="calc.display.value+='8'"></td>
+<td><input class="button" type=button value="9" OnClick="calc.display.value+='9'"></td>
+<td><input class="kenarbutton" type=button value="+" OnClick="calc.display.value+='+'"></td>
+</tr>
+<tr>
+<td><input class="button" type=button value="." OnClick="calc.display.value+='.'"></td>
+<td><input class="button" type=button value="0" OnClick="calc.display.value+='0'"></td>
+<td><input class="button" type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td>
+<td><input class="kenarbutton" type=button value="*" OnClick="calc.display.value+='*'"></td>
+</tr>
+</table>
+</form>
+<script>
+var calc = {
+    display: document.forms['ccal'].display
+};
+</script>
+</body>
+</html>
